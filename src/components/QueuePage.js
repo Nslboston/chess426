@@ -32,6 +32,9 @@ export default function QueuePage({userInfo}) {
             setInfo(res);
             setDisp("game");
         });
+        return (() => {
+          exitQueue().then();
+        })
     }, [])
     //Response format: {side: "white" or "black", opponent: name and elo}
     if (!userInfo.loggedIn) {

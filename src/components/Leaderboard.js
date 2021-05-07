@@ -11,7 +11,7 @@ export default function Leaderboard() {
         try {
             const result = await axios({
                 method: "get",
-                url: `${domain}/leaderboard`,
+                url: `${domain}/leaderboardGet`,
                 withCredentials: true
             });
             if (result.data != undefined) {
